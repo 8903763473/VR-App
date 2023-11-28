@@ -1,0 +1,7 @@
+{
+  "name": "VR",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
