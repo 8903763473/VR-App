@@ -1,0 +1,116 @@
+<body>
+
+	<!-- ------------------------------------------LOGIN-------------------------------------- -->
+
+	<div id="Login" *ngIf="AuthPage == 1">
+		<header>Become a Member</header>
+		<form method="post">
+			<fieldset>
+				<br />
+				<input type="email" name="email" id="email" placeholder="E-mail" [(ngModel)]="LogMail" required>
+				<br /><br />
+				<input type="password" name="password" id="password" placeholder="Password" [(ngModel)]="LogPassword"
+					required>
+				<br /><br />
+				<button (click)="Login()"
+					style="width: 214px;height: 34px;background-color: #FF0000;color: white;">Login</button>
+				<p style="padding: 0;
+					margin: 20px 0px 0px 0px;
+					color: white;
+					font-size: 10px;" (click)="pageRoute(3)">Forget Password</p>
+				<p style="padding: 0;
+			 margin: 20px 0px 0px 0px;
+			 color: white;
+			 font-size: 10px;" (click)="pageRoute(2)">Don't have an account ? Register</p>
+			</fieldset>
+		</form>
+	</div>
+
+	<!-- ----------------------------------REGISTER------------------------------------- -->
+
+	<div id="container" *ngIf="AuthPage == 2">
+		<header>Become a Member</header>
+		<form method="post">
+			<fieldset>
+				<br />
+				<input type="text" name="username" id="username" placeholder="Full Name" [(ngModel)]="name" required
+					autofocus>
+				<br /><br />
+				<input type="email" name="email" id="email1" placeholder="E-mail" [(ngModel)]="mail" required>
+				<br /><br />
+				<input type="password" name="password" id="password1" placeholder="Password" [(ngModel)]="password"
+					required>
+				<br /><br />
+				<input type="number" name="Mobile" id="confirm-password" placeholder="Mobile Number"
+					[(ngModel)]="mobile" required><br /><br /><br />
+				<button (click)="Register()"
+					style="width: 214px;height: 34px;background-color: #FF0000;color: white;">Register</button>
+				<p style="padding: 0;
+			 margin: 20px 0px 0px 0px;
+			 color: white;
+			 font-size: 10px;" (click)="pageRoute(1)">If you already have an account ? Login</p>
+			</fieldset>
+		</form>
+	</div>
+
+	<!-- ----------------------------------------FORGET PASSWORD---------------------------------------- -->
+
+	<div id="Login" *ngIf="AuthPage == 3">
+		<header>New Password</header>
+		<form method="post">
+			<fieldset>
+				<br />
+				<input type="email" name="email" id="email2" placeholder="E mail" [(ngModel)]="ForgetMail" required>
+				<br /><br />
+				<input type="password" name="email" id="password2" placeholder="New Password" [(ngModel)]="Newpassword"
+					required>
+				<br /><br />
+				<input type="password" name="password" id="password3" placeholder="Confirm Password"
+					[(ngModel)]="Confirmpassword" required>
+				<br /><br />
+				<button (click)="SetPassword()"
+					style="width: 214px;height: 34px;background-color: #FF0000;color: white;">Get otp</button>
+				<p style="padding: 0;
+			 margin: 20px 0px 0px 0px;
+			 color: white;
+			 font-size: 10px;" (click)="pageRoute(2)">Don't have an account ? Register</p>
+			</fieldset>
+		</form>
+	</div>
+
+	<!-- -------------------------------------OTP PAGE-------------------------------------------- -->
+
+	<div class="container-fluid bg-body-tertiary d-block OTP" *ngIf="AuthPage == 4">
+		<div class="row justify-content-center OTP1">
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="card bg-white mb-5 mt-5 border-0" style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+					<div class="card-body p-5 text-center innerPart" style="color: white;">
+						<h4>Verify</h4>
+						<p>Your code was sent to you via email</p>
+						<ng-otp-input [config]="otpConfig" (onInputChange)="onOtpChange($event)"></ng-otp-input>
+
+						<button class="btn btn-primary mb-3 verify" (click)="verify()">
+							Verify
+						</button>
+
+						<p class="resend text-muted mb-0" style="color: white;">
+							Didn't receive code? <a (click)="SetPassword()">Request again</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ion-label class="timer">
+			<p>Expire in : <br> </p> {{remainingTime}} s
+		</ion-label>
+
+
+		<!-- <div class="footer">
+			Made with ❤️ by Marcus | Visit <a href="https://shopblocks.com" target="_blank">Shopblocks</a>
+		</div> -->
+	</div>
+
+
+
+</body>

@@ -8,11 +8,22 @@ import { Injectable } from '@angular/core'
 export class Apiservice {
     constructor(public http: HttpClient) { }
 
-    public baseUrl = 'http://localhost:8585/api'
+    public baseUrl = 'http://localhost:8589/api'
 
     Register(data: any) {
-        return this.http.post(this.baseUrl + '/auth/register', data)
+        return this.http.post(this.baseUrl + '/auth/Register', data)
     }
 
+    Login(data: any) {
+        return this.http.post(this.baseUrl + '/auth/login', data)
+    }
+
+    getOTP(data: any) {
+        return this.http.put(this.baseUrl + '/auth/getOtp', data)
+    }
+
+    verifyOTP(data: any) {
+        return this.http.post(this.baseUrl + '/auth/verifyOtp', data)
+    }
 
 }
