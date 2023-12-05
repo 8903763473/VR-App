@@ -60,12 +60,12 @@
 		<form method="post">
 			<fieldset>
 				<br />
-				<input type="email" name="email" id="email2" placeholder="E mail" [(ngModel)]="ForgetMail" required>
+				<input type="email" name="email" placeholder="E mail" [(ngModel)]="ForgetMail" required>
 				<br /><br />
-				<input type="password" name="email" id="password2" placeholder="New Password" [(ngModel)]="Newpassword"
+				<input type="password" name="email" placeholder="New Password" [(ngModel)]="Newpassword"
 					required>
 				<br /><br />
-				<input type="password" name="password" id="password3" placeholder="Confirm Password"
+				<input type="password" name="password"  placeholder="Confirm Password"
 					[(ngModel)]="Confirmpassword" required>
 				<br /><br />
 				<button (click)="SetPassword()"

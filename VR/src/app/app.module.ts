@@ -13,8 +13,8 @@ import { HomePage } from './home/home.page';
 import { NgOtpInputModule } from 'ng-otp-input';
 
 @NgModule({
-  declarations: [AppComponent, AuthenticateComponent,HomePage],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,FormsModule,NgOtpInputModule],
+  declarations: [AppComponent, AuthenticateComponent, HomePage],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule, NgOtpInputModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
