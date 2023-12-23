@@ -85,7 +85,7 @@ export class AuthenticateComponent{
 
       this.api.Register(post).subscribe({
         next: (res => {
-          console.log(res);
+          console.log('REG',res);
           this.register = false
           this.toast('success', 'Registered Successfully');
           setTimeout(() => {

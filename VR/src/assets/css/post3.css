@@ -1,0 +1,16 @@
+.elementor-3846 .elementor-element.elementor-element-7b005a1c:not(.elementor-motion-effects-element-type-background),
+.elementor-3846 .elementor-element.elementor-element-7b005a1c>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-color: #000000;
+}
+
+.elementor-3846 .elementor-element.elementor-element-7b005a1c {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+.elementor-3846 .elementor-element.elementor-element-7b005a1c>.elementor-background-overlay {
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-3846 .elementor-element.elementor-element-241a8a3e .nft-container-1200 {
+    max-width: 1200px;
+}
