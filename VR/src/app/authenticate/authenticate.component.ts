@@ -9,7 +9,7 @@ import { NgOtpInputComponent } from 'ng-otp-input';
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.scss'],
 })
-export class AuthenticateComponent implements OnInit {
+export class AuthenticateComponent{
 
   login = false
   name: any
@@ -50,22 +50,26 @@ export class AuthenticateComponent implements OnInit {
     | NgOtpInputComponent
     | any;
 
-  ngOnInit() {
+  ionViewWillEnter() {
+    const isLogged = localStorage.getItem('Login')
+    if(isLogged == 'true'){
+      this.router.navigate(['/home'])
+    }
     this.register = false
     this.AuthPage = 1
   }
 
   pageRoute(id) {
     this.AuthPage = id
-    if (id == 3 || id == 2) {
+    // if (id == 3 || id == 2) {
       this.LogMail = undefined;
       this.LogPassword = undefined;
-    } else if (id == 1) {
+    // } else if (id == 1 || id == 2) {
       this.name = undefined
       this.mail = undefined
       this.password = undefined
       this.mobile = undefined
-    }
+    // }
   }
 
   Register() {
@@ -84,7 +88,7 @@ export class AuthenticateComponent implements OnInit {
           console.log(res);
           this.register = false
           this.toast('success', 'Registered Successfully');
-          setInterval(() => {
+          setTimeout(() => {
             this.AuthPage = 1
           }, 2000)
         }),
@@ -112,6 +116,7 @@ export class AuthenticateComponent implements OnInit {
           localStorage.setItem('mail', res[0]?.mail)
           localStorage.setItem('mobile', res[0]?.mobile)
           localStorage.setItem('name', res[0]?.name)
+          localStorage.setItem('Login', 'true')
           this.toast('success', 'Login successfull');
           setTimeout(() => {
             this.router.navigate(['/home'])
@@ -172,7 +177,7 @@ export class AuthenticateComponent implements OnInit {
           this.toast('success', 'Password changed successfully');
           setTimeout(() => {
             this.otpValue = undefined
-            this.ngOnInit();
+            this.ionViewWillEnter();
           }, 2000)
           clearInterval(this.timer);
         }),
@@ -199,8 +204,8 @@ export class AuthenticateComponent implements OnInit {
         clearInterval(this.timer);
         console.log('Time expired. Handle accordingly.');
         this.toast('error', 'Time expired Try again');
-        setInterval(() => {
-          this.ngOnInit();
+        setTimeout(() => {
+          this.ionViewWillEnter();
         }, 2000)
       }
     }, 1000);
