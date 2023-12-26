@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home/home.page';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ChatComponent } from './chat/chat.component';
 
 
 const routes: Routes = [
@@ -30,10 +31,14 @@ const routes: Routes = [
     path: 'home',
     component: HomePage
   },
+  {
+    path: 'chat',
+    component: ChatComponent
+  },
 ];
 
 @NgModule({
-  declarations: [AppComponent, AuthenticateComponent, HomePage],
+  declarations: [AppComponent, AuthenticateComponent, HomePage, ChatComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule, NgOtpInputModule,
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
