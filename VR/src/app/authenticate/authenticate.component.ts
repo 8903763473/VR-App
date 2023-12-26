@@ -9,7 +9,7 @@ import { NgOtpInputComponent } from 'ng-otp-input';
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.scss'],
 })
-export class AuthenticateComponent{
+export class AuthenticateComponent {
 
   login = false
   name: any
@@ -51,8 +51,10 @@ export class AuthenticateComponent{
     | any;
 
   ionViewWillEnter() {
-    const isLogged = localStorage.getItem('Login')
-    if(isLogged == 'true'){
+    const isLogged = localStorage.getItem('Login');
+    console.log(isLogged);
+
+    if (isLogged == 'true') {
       this.router.navigate(['/home'])
     }
     this.register = false
@@ -62,13 +64,13 @@ export class AuthenticateComponent{
   pageRoute(id) {
     this.AuthPage = id
     // if (id == 3 || id == 2) {
-      this.LogMail = undefined;
-      this.LogPassword = undefined;
+    this.LogMail = undefined;
+    this.LogPassword = undefined;
     // } else if (id == 1 || id == 2) {
-      this.name = undefined
-      this.mail = undefined
-      this.password = undefined
-      this.mobile = undefined
+    this.name = undefined
+    this.mail = undefined
+    this.password = undefined
+    this.mobile = undefined
     // }
   }
 
@@ -85,7 +87,7 @@ export class AuthenticateComponent{
 
       this.api.Register(post).subscribe({
         next: (res => {
-          console.log('REG',res);
+          console.log('REG', res);
           this.register = false
           this.toast('success', 'Registered Successfully');
           setTimeout(() => {
@@ -116,6 +118,7 @@ export class AuthenticateComponent{
           localStorage.setItem('mail', res[0]?.mail)
           localStorage.setItem('mobile', res[0]?.mobile)
           localStorage.setItem('name', res[0]?.name)
+          localStorage.setItem('name', res[0]?.token)
           localStorage.setItem('Login', 'true')
           this.toast('success', 'Login successfull');
           setTimeout(() => {

@@ -1245,8 +1245,10 @@
 .nft-blog-inner-item .thx-inner-text h3 a {
   -webkit-transition: 500ms all ease;
   transition: 500ms all ease;
+  color: white;
+  text-decoration: none !important;
 }
-.nft-blog-inner-item .thx-inner-text h3:hover {
+.nft-blog-inner-item .thx-inner-text h3 a:hover {
   color: #0AD45F;
 }
 .nft-blog-inner-item .thx-inner-text .nft-read-more {
