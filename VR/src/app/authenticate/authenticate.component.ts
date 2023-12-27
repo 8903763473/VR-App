@@ -118,7 +118,7 @@ export class AuthenticateComponent {
           localStorage.setItem('mail', res[0]?.mail)
           localStorage.setItem('mobile', res[0]?.mobile)
           localStorage.setItem('name', res[0]?.name)
-          localStorage.setItem('name', res[0]?.token)
+          localStorage.setItem('token', res[0]?.token)
           localStorage.setItem('Login', 'true')
           this.toast('success', 'Login successfull');
           setTimeout(() => {

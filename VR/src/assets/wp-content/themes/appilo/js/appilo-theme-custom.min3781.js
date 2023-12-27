@@ -49,7 +49,7 @@ console.log("Appilo Custom JS"), function (e) {
             }), e.on("click", function () {
                 e.toggleClass("on off"), s()
             })
-        }(), n(".appilo-footer .tweets-carousel").length && n(".appilo-footer .tweets-carousel").owlCarousel({
+        }(), n(".appilo-footer .tweets-carousel").length && n(".appilo-footer .tweets-carousel")?.owlCarousel({
             loop: !0,
             margin: 30,
             nav: !0,
@@ -64,7 +64,7 @@ console.log("Appilo Custom JS"), function (e) {
             boxClass: "pogress-wow",
             animateClass: "animated",
             mobile: !0
-        }).init(), n("#app-features-carousel-slider").length && n("#app-features-carousel-slider").owlCarousel({
+        }).init(), n("#app-features-carousel-slider").length && n("#app-features-carousel-slider")?.owlCarousel({
             loop: !0,
             margin: 30,
             nav: !0,
@@ -76,7 +76,7 @@ console.log("Appilo Custom JS"), function (e) {
             autoplayTimeout: 5e3,
             autoplayHoverPause: !0,
             responsive: {0: {items: 1}, 480: {items: 1}, 600: {items: 2}, 768: {items: 2}, 1000: {items: 3}}
-        }), n(".blog-style-one .blog-carousel").length && n(".blog-style-one .blog-carousel").owlCarousel({
+        }), n(".blog-style-one .blog-carousel").length && n(".blog-style-one .blog-carousel")?.owlCarousel({
             loop: !0,
             margin: 30,
             nav: !0,
@@ -88,7 +88,7 @@ console.log("Appilo Custom JS"), function (e) {
             autoplayTimeout: 5e3,
             autoplayHoverPause: !0,
             responsive: {0: {items: 1}, 480: {items: 1}, 600: {items: 2}, 768: {items: 2}, 1000: {items: 3}}
-        }), n(".tweets-carousel").length && n(".tweets-carousel").owlCarousel({
+        }), n(".tweets-carousel").length && n(".tweets-carousel")?.owlCarousel({
             loop: !0,
             margin: 0,
             nav: !0,
@@ -273,7 +273,7 @@ console.log("Appilo Custom JS"), function (e) {
                 767: {slidesPerView: 2, spaceBetween: 10},
                 575: {slidesPerView: 1, spaceBetween: 5}
             }
-        }), e(".topapp-main .single-item-carousel").length && e(".single-item-carousel").owlCarousel({
+        }), e(".topapp-main .single-item-carousel").length && e(".single-item-carousel")?.owlCarousel({
             animateOut: "fadeOut",
             animateIn: "fadeIn",
             loop: !0,
@@ -290,7 +290,7 @@ console.log("Appilo Custom JS"), function (e) {
                 1200: {items: 1},
                 1500: {items: 1}
             }
-        }), e(".topapp-team-carousel").length && e(".topapp-team-carousel").owlCarousel({
+        }), e(".topapp-team-carousel").length && e(".topapp-team-carousel")?.owlCarousel({
             loop: !0,
             margin: 0,
             nav: !0,
@@ -432,7 +432,7 @@ console.log("Appilo Custom JS"), function (e) {
                     i.text(this.countNum)
                 }
             })
-        })), n(".app-screenshot-slider").length && (n(".app-screenshot-slider").owlCarousel({
+        })), n(".app-screenshot-slider").length && (n(".app-screenshot-slider")?.owlCarousel({
             loop: !0,
             margin: 50,
             items: 1,
@@ -455,7 +455,7 @@ console.log("Appilo Custom JS"), function (e) {
             }
         }
 
-        n(".app-landing-testimonials-slider").length && n(".app-landing-testimonials-slider").owlCarousel({
+        n(".app-landing-testimonials-slider").length && n(".app-landing-testimonials-slider")?.owlCarousel({
             mouseDrag: !1,
             margin: 30,
             smartSpeed: 300,
@@ -465,7 +465,7 @@ console.log("Appilo Custom JS"), function (e) {
             responsive: {0: {items: 1}, 992: {items: 2}}
         }), n(window).load(function () {
             n(".galaxy .map-link").length && n(".map-link").magnificPopup({type: "iframe"})
-        }), n(".agnecy-projects-slider").length && n(".agnecy-projects-slider").owlCarousel({
+        }), n(".agnecy-projects-slider").length && n(".agnecy-projects-slider")?.owlCarousel({
             mouseDrag: !1,
             margin: 25,
             smartSpeed: 300,
@@ -480,7 +480,7 @@ console.log("Appilo Custom JS"), function (e) {
                 1500: {items: 3},
                 1700: {items: 5}
             }
-        }), n(".agency-blog-slider").length && n(".agency-blog-slider").owlCarousel({
+        }), n(".agency-blog-slider").length && n(".agency-blog-slider")?.owlCarousel({
             mouseDrag: !1,
             margin: 25,
             smartSpeed: 300,
@@ -488,7 +488,7 @@ console.log("Appilo Custom JS"), function (e) {
             nav: !0,
             navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
             responsive: {0: {items: 1}, 600: {items: 2, center: !1}, 992: {items: 3}}
-        }), n(".agency-testimonial-slider").length && n(".agency-testimonial-slider").owlCarousel({
+        }), n(".agency-testimonial-slider").length && n(".agency-testimonial-slider")?.owlCarousel({
             items: 1,
             mouseDrag: !1,
             smartSpeed: 300,
@@ -611,7 +611,7 @@ console.log("Appilo Custom JS"), function (e) {
                         e(this).prev("ul").slideToggle(500)
                     }))
                 }, SaasClassicMemberSLider: function () {
-                    e("#s2_team_slide").owlCarousel({
+                    e("#s2_team_slide")?.owlCarousel({
                         margin: 30,
                         responsiveClass: !0,
                         nav: !0,
@@ -685,7 +685,7 @@ console.log("Appilo Custom JS"), function (e) {
                     })
                 }, EiTeamSlide: function () {
                     if (e("body.rtl").length) var n = !0; else n = !1;
-                    e("#ei-team-slide").owlCarousel({
+                    e("#ei-team-slide")?.owlCarousel({
                         margin: 0,
                         responsiveClass: !0,
                         nav: !0,
@@ -720,7 +720,7 @@ console.log("Appilo Custom JS"), function (e) {
                     })
                 }, EiTestimonialSlider: function () {
                     if (e("body.rtl").length) var n = !0; else n = !1;
-                    e("#testimonial-scroller").owlCarousel({
+                    e("#testimonial-scroller")?.owlCarousel({
                         margin: 105,
                         responsiveClass: !0,
                         nav: !1,
@@ -732,7 +732,7 @@ console.log("Appilo Custom JS"), function (e) {
                     })
                 }, EiPartnerSlider: function () {
                     if (e("body.rtl").length) var n = !0; else n = !1;
-                    e("#ei-partner-slide").owlCarousel({
+                    e("#ei-partner-slide")?.owlCarousel({
                         margin: 105,
                         autoplay: !0,
                         loop: !0,
@@ -778,7 +778,7 @@ console.log("Appilo Custom JS"), function (e) {
                         e(this).prev("ul").slideToggle(500)
                     }))
                 }, AppSeoPartner: function () {
-                    e("#partner-slide").owlCarousel({
+                    e("#partner-slide")?.owlCarousel({
                         margin: 95,
                         responsiveClass: !0,
                         nav: !1,
@@ -817,7 +817,7 @@ console.log("Appilo Custom JS"), function (e) {
                 init: function () {
                     this.StrBannerSlide(), this.StrMobileMenu(), this.StrProgressBar(), this.StrFeatureSlide(), this.StrPortfolioSlide(), this.StrOnePageNav(), this.StrTestimonial(), this.StrPartnerSlider(), this.StrTeamSlide(), this.StrBlogSlide()
                 }, StrFeatureSlide: function () {
-                    e("#str-slide").owlCarousel({
+                    e("#str-slide")?.owlCarousel({
                         margin: 30,
                         responsiveClass: !0,
                         nav: !0,
@@ -829,7 +829,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1}, 400: {items: 1}, 600: {items: 2}, 700: {items: 3}, 1000: {items: 4}}
                     })
                 }, StrPortfolioSlide: function () {
-                    e("#str-protfolio-slide").owlCarousel({
+                    e("#str-protfolio-slide")?.owlCarousel({
                         margin: 30,
                         responsiveClass: !0,
                         nav: !0,
@@ -842,7 +842,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1}, 400: {items: 1}, 600: {items: 1}, 700: {items: 1}, 1000: {items: 2}}
                     })
                 }, StrBannerSlide: function () {
-                    e("#str-banner-slide").length && e("#str-banner-slide").owlCarousel({
+                    e("#str-banner-slide").length && e("#str-banner-slide")?.owlCarousel({
                         animateOut: "fadeOut",
                         animateIn: "fadeIn",
                         loop: !0,
@@ -886,7 +886,7 @@ console.log("Appilo Custom JS"), function (e) {
                         e(".carousel-indicators2 li").removeClass("active"), e(".carousel-indicators2").find("[data-slide-to='" + n + "']").addClass("active")
                     })
                 }, StrPartnerSlider: function () {
-                    e("#str-partner-slide").owlCarousel({
+                    e("#str-partner-slide")?.owlCarousel({
                         margin: 105,
                         autoplay: !0,
                         loop: !0,
@@ -900,7 +900,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 2}, 400: {items: 2}, 600: {items: 4}, 700: {items: 3}, 1000: {items: 4}}
                     })
                 }, StrBlogSlide: function () {
-                    e("#str-blog-slide").owlCarousel({
+                    e("#str-blog-slide")?.owlCarousel({
                         margin: 30,
                         responsiveClass: !0,
                         nav: !1,
@@ -910,7 +910,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1}, 400: {items: 1}, 600: {items: 1}, 700: {items: 2}, 1000: {items: 3}}
                     })
                 }, StrTeamSlide: function () {
-                    e("#str-team-slide").owlCarousel({
+                    e("#str-team-slide")?.owlCarousel({
                         margin: 30,
                         responsiveClass: !0,
                         nav: !0,
@@ -971,7 +971,7 @@ console.log("Appilo Custom JS"), function (e) {
                     }))
                 }, DiaPortSlider: function () {
                     if (e("body.rtl").length) var n = !0; else n = !1;
-                    e("#dia-portfolio-slider").owlCarousel({
+                    e("#dia-portfolio-slider")?.owlCarousel({
                         margin: 20,
                         responsiveClass: !0,
                         nav: !0,
@@ -992,7 +992,7 @@ console.log("Appilo Custom JS"), function (e) {
                         }
                     })
                 }, DiaTeamSlide: function () {
-                    e("#dia-team-slide").owlCarousel({
+                    e("#dia-team-slide")?.owlCarousel({
                         margin: 0,
                         responsiveClass: !0,
                         nav: !0,
@@ -1079,7 +1079,7 @@ console.log("Appilo Custom JS"), function (e) {
                         }))
                     })
                 }, AplReviewSlide: function () {
-                    e("#ln-review-slide").owlCarousel({
+                    e("#ln-review-slide")?.owlCarousel({
                         margin: 30,
                         responsiveClass: !0,
                         nav: !1,
@@ -1130,7 +1130,7 @@ console.log("Appilo Custom JS"), function (e) {
                         popupPadding: 0
                     })
                 }, HostingCarousel: function () {
-                    e(".hosting-carousel").length && e(".hosting-carousel").owlCarousel({
+                    e(".hosting-carousel").length && e(".hosting-carousel")?.owlCarousel({
                         loop: !0,
                         autoplay: !0,
                         autoplayTimeout: 3e3,
@@ -1139,7 +1139,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1, nav: !1}, 600: {items: 2, nav: !1}, 1000: {items: 4}}
                     })
                 }, HostingReviewCarousel2: function () {
-                    e("#testimonial-carousel-two").length && e("#testimonial-carousel-two").owlCarousel({
+                    e("#testimonial-carousel-two").length && e("#testimonial-carousel-two")?.owlCarousel({
                         loop: !0,
                         autoplay: !1,
                         margin: 30,
@@ -1147,7 +1147,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1, nav: !1}, 600: {items: 1, nav: !1}, 1000: {items: 2}}
                     })
                 }, HostingClientCarousel: function () {
-                    e(".client-carousel").length && e(".client-carousel").owlCarousel({
+                    e(".client-carousel").length && e(".client-carousel")?.owlCarousel({
                         loop: !0,
                         autoplay: !0,
                         autoplayTimeout: 3e3,
@@ -1156,7 +1156,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1, nav: !1}, 600: {items: 3, nav: !1}, 1000: {items: 5}}
                     })
                 }, HostingDataCarousel: function () {
-                    e(".data-center-carousel").length && e(".data-center-carousel").owlCarousel({
+                    e(".data-center-carousel").length && e(".data-center-carousel")?.owlCarousel({
                         loop: !0,
                         autoplay: !0,
                         autoplayTimeout: 3e3,
@@ -1165,7 +1165,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1, nav: !1}, 600: {items: 2, nav: !1}, 1000: {items: 3}}
                     })
                 }, HostingInformationCarousel: function () {
-                    e(".information-carousel").length && e(".information-carousel").owlCarousel({
+                    e(".information-carousel").length && e(".information-carousel")?.owlCarousel({
                         loop: !0,
                         autoplay: !0,
                         autoplayTimeout: 3e3,
@@ -1176,7 +1176,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1, nav: !1}, 600: {items: 2, nav: !1}, 1000: {items: 3}}
                     })
                 }, HostingOfferCrousel: function () {
-                    e(".offer-carousel").length && e(".offer-carousel").owlCarousel({
+                    e(".offer-carousel").length && e(".offer-carousel")?.owlCarousel({
                         loop: !0,
                         autoplay: !0,
                         autoplayTimeout: 3e3,
@@ -1185,7 +1185,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1, nav: !1}, 600: {items: 2, nav: !1}, 1000: {items: 5}}
                     })
                 }, HostingReviewCarousel: function () {
-                    e(".review-carousel").length && e(".review-carousel").owlCarousel({
+                    e(".review-carousel").length && e(".review-carousel")?.owlCarousel({
                         loop: !0,
                         autoplay: !1,
                         margin: 30,
@@ -1228,7 +1228,7 @@ console.log("Appilo Custom JS"), function (e) {
                         e(this).prev("ul").slideToggle(500)
                     })), e(".pm-blog-section .pm-blog-img-text:nth-child(2)").addClass("active")
                 }, PmPartnerSlider: function () {
-                    e("#pm-partner-slide").owlCarousel({
+                    e("#pm-partner-slide")?.owlCarousel({
                         margin: 90,
                         autoplay: !0,
                         loop: !0,
@@ -1276,7 +1276,7 @@ console.log("Appilo Custom JS"), function (e) {
                         e(this).prev("ul").slideToggle(500)
                     }))
                 }, CRMScreenSlider: function () {
-                    e("#crm-screen-slider").owlCarousel({
+                    e("#crm-screen-slider")?.owlCarousel({
                         margin: 0,
                         items: 1,
                         loop: !0,
@@ -1289,7 +1289,7 @@ console.log("Appilo Custom JS"), function (e) {
                         navText: ["<i class='fas fa-long-arrow-alt-left'></i>", "<i class='fas fa-long-arrow-alt-right'></i>"]
                     })
                 }, CRMTestimonialSlider: function () {
-                    e("#crm-testimonial-id").owlCarousel({
+                    e("#crm-testimonial-id")?.owlCarousel({
                         margin: 0,
                         items: 1,
                         loop: !0,
@@ -1306,7 +1306,7 @@ console.log("Appilo Custom JS"), function (e) {
                         }), window.odometerOptions = {format: "d"}
                     }))
                 }, crmPartnerSlider: function () {
-                    e("#crm-partner-slide").owlCarousel({
+                    e("#crm-partner-slide")?.owlCarousel({
                         margin: 90,
                         autoplay: !0,
                         loop: !0,
@@ -1390,7 +1390,7 @@ console.log("Appilo Custom JS"), function (e) {
                         helpers: {media: {}}
                     })
                 }, SMMTestimonialSlider: function () {
-                    e("#smm-testimonial-id").owlCarousel({
+                    e("#smm-testimonial-id")?.owlCarousel({
                         margin: 0,
                         items: 1,
                         loop: !0,
@@ -1401,7 +1401,7 @@ console.log("Appilo Custom JS"), function (e) {
                         navText: ["<i class='fas fa-long-arrow-alt-left'></i>", "<i class='fas fa-long-arrow-alt-right'></i>"]
                     })
                 }, SmMPartnerSlider: function () {
-                    e("#smm-partner-id").owlCarousel({
+                    e("#smm-partner-id")?.owlCarousel({
                         margin: 90,
                         autoplay: !0,
                         loop: !0,
@@ -1502,7 +1502,7 @@ console.log("Appilo Custom JS"), function (e) {
                         e(this).prev("ul").slideToggle(500)
                     }))
                 }, seo_2_portfolio_slider: function () {
-                    e(".seo-2-portfolio-content").length && e(".seo-2-portfolio-content").owlCarousel({
+                    e(".seo-2-portfolio-content").length && e(".seo-2-portfolio-content")?.owlCarousel({
                         loop: !0,
                         nav: !0,
                         margin: 30,
@@ -1580,7 +1580,7 @@ console.log("Appilo Custom JS"), function (e) {
                         e(".app-medi-search-body").toggleClass("app-medi-search-open")
                     })
                 }, MediAppService: function () {
-                    e(".medi-app-service-content").owlCarousel({
+                    e(".medi-app-service-content")?.owlCarousel({
                         margin: 30,
                         responsiveClass: !0,
                         nav: !1,
@@ -1590,7 +1590,7 @@ console.log("Appilo Custom JS"), function (e) {
                         responsive: {0: {items: 1}, 400: {items: 1}, 600: {items: 1}, 700: {items: 2}, 1000: {items: 3}}
                     })
                 }, MediAppTestimonial: function () {
-                    e(".app-medi-testimonial-slider").owlCarousel({
+                    e(".app-medi-testimonial-slider")?.owlCarousel({
                         items: 1,
                         loop: !0,
                         nav: !1,
@@ -1600,7 +1600,7 @@ console.log("Appilo Custom JS"), function (e) {
                         smartSpeed: 1e3
                     })
                 }, MediAppPartner: function () {
-                    e(".app-medi-partner-slider").owlCarousel({
+                    e(".app-medi-partner-slider")?.owlCarousel({
                         margin: 50,
                         autoplay: !0,
                         loop: !0,
@@ -1640,7 +1640,7 @@ console.log("Appilo Custom JS"), function (e) {
                     })
                 }, AppResSlider: function () {
                     e(window).on("load", function () {
-                        e(".app-res-slider-area").length && e(".app-res-slider-area").owlCarousel({
+                        e(".app-res-slider-area").length && e(".app-res-slider-area")?.owlCarousel({
                             animateOut: "fadeOut",
                             animateIn: "fadeIn",
                             loop: !0,
@@ -1671,7 +1671,7 @@ console.log("Appilo Custom JS"), function (e) {
                     })
                 }, ITupSlider: function () {
                     e(window).on("load", function () {
-                        e(".it-up-testimonial-slider-wrap, .it-up-blog-slide").owlCarousel({
+                        e(".it-up-testimonial-slider-wrap, .it-up-blog-slide")?.owlCarousel({
                             margin: 30,
                             responsiveClass: !0,
                             nav: !1,
@@ -1691,7 +1691,7 @@ console.log("Appilo Custom JS"), function (e) {
                     })
                 }, CybTestimonial: function () {
                     e(window).on("load", function () {
-                        e("#cyb-testimonial-id").owlCarousel({
+                        e("#cyb-testimonial-id")?.owlCarousel({
                             margin: 30,
                             responsiveClass: !0,
                             nav: !1,
@@ -1709,7 +1709,7 @@ console.log("Appilo Custom JS"), function (e) {
                         })
                     })
                 }, EmailTestimonial: function () {
-                    e("#em-testimonial-slide-id").owlCarousel({
+                    e("#em-testimonial-slide-id")?.owlCarousel({
                         items: 1,
                         loop: !0,
                         nav: !1,
@@ -1721,7 +1721,7 @@ console.log("Appilo Custom JS"), function (e) {
                         helpers: {media: {}}
                     })
                 }, WebAppTestimonialSLider: function () {
-                    e("#web-app-testimoial-slide").owlCarousel({items: 1, loop: !0, nav: !1, dots: !0, autoplay: !0})
+                    e("#web-app-testimoial-slide")?.owlCarousel({items: 1, loop: !0, nav: !1, dots: !0, autoplay: !0})
                 }
             }
         };
@@ -1752,7 +1752,7 @@ console.log("Appilo Custom JS"), function (e) {
             e("body").addClass("search-active")
         }), e(".close-search").on("click", function () {
             e("body").removeClass("search-active")
-        })), e(".app-osaas-main-slider-carousel").length && e(".app-osaas-main-slider-carousel").owlCarousel({
+        })), e(".app-osaas-main-slider-carousel").length && e(".app-osaas-main-slider-carousel")?.owlCarousel({
             loop: !0,
             margin: 0,
             nav: !0,
@@ -1760,7 +1760,7 @@ console.log("Appilo Custom JS"), function (e) {
             autoplay: 6e3,
             navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
             responsive: {0: {items: 1}, 600: {items: 1}, 800: {items: 1}, 1024: {items: 1}}
-        }), e(".app-osaas-featured-carousel").length && e(".app-osaas-featured-carousel").owlCarousel({
+        }), e(".app-osaas-featured-carousel").length && e(".app-osaas-featured-carousel")?.owlCarousel({
             loop: !0,
             margin: 0,
             nav: !0,
@@ -1776,7 +1776,7 @@ console.log("Appilo Custom JS"), function (e) {
                 1500: {items: 5},
                 1800: {items: 6}
             }
-        }), e(".app-osaas-single-item-carousel").length && e(".app-osaas-single-item-carousel").owlCarousel({
+        }), e(".app-osaas-single-item-carousel").length && e(".app-osaas-single-item-carousel")?.owlCarousel({
             loop: !0,
             margin: 0,
             nav: !0,
@@ -1793,7 +1793,7 @@ console.log("Appilo Custom JS"), function (e) {
             }
         }), e(".appilo-menu ul li:not(.dropdown) .nav-link").on("click", function () {
             e(".navbar-collapse").collapse("hide")
-        }), e(".app-osaas-news-carousel").length && e(".app-osaas-news-carousel").owlCarousel({
+        }), e(".app-osaas-news-carousel").length && e(".app-osaas-news-carousel")?.owlCarousel({
             loop: !0,
             margin: 0,
             nav: !0,
@@ -1808,7 +1808,7 @@ console.log("Appilo Custom JS"), function (e) {
                 1200: {items: 1},
                 1500: {items: 1}
             }
-        }), e(".app-osaas-three-item-carousel").length && e(".app-osaas-three-item-carousel").owlCarousel({
+        }), e(".app-osaas-three-item-carousel").length && e(".app-osaas-three-item-carousel")?.owlCarousel({
             loop: !0,
             margin: 30,
             nav: !0,
@@ -1823,7 +1823,7 @@ console.log("Appilo Custom JS"), function (e) {
                 1200: {items: 3},
                 1500: {items: 3}
             }
-        }), e(".app-osaas-intro-feature-carousel").length && e(".app-osaas-intro-feature-carousel").owlCarousel({
+        }), e(".app-osaas-intro-feature-carousel").length && e(".app-osaas-intro-feature-carousel")?.owlCarousel({
             loop: !0,
             margin: 0,
             nav: !0,
@@ -1876,7 +1876,7 @@ console.log("Appilo Custom JS"), function (e) {
             var i = e(e(this).attr("data-tab"));
             if (e(i).is(":visible")) return !1;
             i.parents(".app-osaas-tabs-box").find(".tab-buttons").find(".tab-btn").removeClass("active-btn"), e(this).addClass("active-btn"), i.parents(".app-osaas-tabs-box").find(".tabs-content").find(".tab").fadeOut(0), i.parents(".app-osaas-tabs-box").find(".tabs-content").find(".tab").removeClass("active-tab"), e(i).fadeIn(300), e(i).addClass("active-tab")
-        }), e(".app-osaas-sponsors-carousel").length && e(".app-osaas-sponsors-carousel").owlCarousel({
+        }), e(".app-osaas-sponsors-carousel").length && e(".app-osaas-sponsors-carousel")?.owlCarousel({
             loop: !0,
             margin: 20,
             nav: !0,

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Apiservice } from './api/api.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(public router: Router, public api: Apiservice) {
+
+    setInterval(() => {
+      var page = router.url.split('/')[1]
+      if (page == 'chat') {
+        this.assignNetworkStatus('online');
+      } else {
+        this.assignNetworkStatus('offline');
+      }
+    }, 1000)
+  }
+
+
+  assignNetworkStatus(status) {
+    let post = {
+      'userId': localStorage.getItem('userId'),
+      'status': status
+    }
+    this.api.NetworkStatus(post).subscribe({
+      next: (res => {
+        // console.log(res);
+      }),
+      error: (err => {
+        console.log(err);
+      })
+    })
+  }
 }
