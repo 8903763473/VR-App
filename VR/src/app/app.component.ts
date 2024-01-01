@@ -12,7 +12,8 @@ export class AppComponent {
 
     setInterval(() => {
       var page = router.url.split('/')[1]
-      if (page == 'chat') {
+      var status = sessionStorage.getItem('user')
+      if (page == 'chat' && status == 'online') {
         this.assignNetworkStatus('online');
       } else {
         this.assignNetworkStatus('offline');

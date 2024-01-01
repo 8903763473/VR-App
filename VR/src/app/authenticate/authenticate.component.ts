@@ -30,6 +30,7 @@ export class AuthenticateComponent {
   otpValue: any
   remainingTime: number = 90;
   timer: any;
+  pic: any
 
   constructor(public api: Apiservice, public router: Router) { }
 
@@ -213,6 +214,26 @@ export class AuthenticateComponent {
       }
     }, 1000);
   }
+
+  // imageSelected(event) {
+  //   const inputElement = event.target as HTMLInputElement;
+  //   if (inputElement.files && inputElement.files.length > 0) {
+  //     const file = inputElement.files[0];
+  //     const img = new Image();
+  //     img.src = URL.createObjectURL(file);
+  //     img.onload = () => {
+  //       const canvas = document.createElement('canvas');
+  //       canvas.width = img.width;
+  //       canvas.height = img.height;
+  //       const ctx = canvas.getContext('2d');
+  //       if (ctx) {
+  //         ctx.drawImage(img, 0, 0);
+  //         this.pic = canvas.toDataURL('image/jpeg', 0.07);
+  //         console.log(this.pic);
+  //       }
+  //     };
+  //   }
+  // }
 
   toast(typeIcon: any, error: any, timerProgressBar: boolean = false) {
     Swal.fire({

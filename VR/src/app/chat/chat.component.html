@@ -17,7 +17,7 @@
         <div class="messages-page__search mb-0 px-3 pb-3">
           <div class="custom-form__search-wrapper">
             <input type="text" class="form-control custom-form" id="search"
-              placeholder="Rechercher un message, un utilisateur…" autocomplete="off">
+              placeholder="Rechercher un message, un utilisateur…" autocomplete="off" [(ngModel)]="search">
             <button type="submit" class="custom-form__search-submit">
               <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--search" viewBox="0 0 46.6 46.6">
                 <path
@@ -30,12 +30,12 @@
 
         <ul class="messages-page__list pb-5 px-1 px-md-3">
           <li class="messaging-member messaging-member--new messaging-member"
-            *ngFor="let item of allUsers;let i = index"
+            *ngFor="let item of allUsers | search : 'name' : search;let i = index"
             [ngClass]="{'messaging-member--active':clicked!==undefined ? clicked===item.id : i==0 ,'messaging-member--online':item?.status==='online'}"
             (click)="SelectChat(item)">
             <div class="messaging-member__wrapper">
               <div class="messaging-member__avatar">
-                <img src="https://randomuser.me/api/portraits/thumb/men/74.jpg" alt="Bessie Cooper" loading="lazy">
+                <img src="{{item.image}}" alt="Bessie Cooper" loading="lazy" style="width: 100%;height: 100%;">
                 <div [ngClass]="{'user-status':item?.status==='online'}"></div>
               </div>
 
@@ -156,8 +156,9 @@
 
               <div class="chat__infos pl-2 pl-md-0">
                 <div class="chat-member__wrapper" data-online="true">
-                  <div class="chat-member__avatar">
-                    <img src="https://randomuser.me/api/portraits/thumb/women/56.jpg" alt="Jenny Smith" loading="lazy">
+                  <div class="chat-member__avatar" style="height: 3.5rem;">
+                    <img src="{{selectedChat?.image}}" alt="Jenny Smith" loading="lazy"
+                      style="width: 100%;height: 100%;">
                     <div class="user-status user-status--large" *ngIf="selectedChat?.status=='online'"></div>
                   </div>
                   <div class="chat-member__details">
@@ -199,21 +200,20 @@
 
               </div>
             </div>
-            <div class="chat__content pt-4 px-3">
-              <ul class="chat__list-messages">
-                <li>
+            <div class="chat__content pt-4 px-3" #scrollContainer>
+              <ul class="chat__list-messages" *ngFor="let item of ourConversation">
+                <li *ngIf="item.senderId!=myId">
                   <div class="chat__time">Yesterday at 16:43</div>
                   <div class="chat__bubble chat__bubble--you">
-                    Hey, I bought something yesterdat but haven't gotten any confirmation. Do you know I if the order
-                    went through?
+                    {{item.message}}
                   </div>
                 </li>
-                <li>
+                <li *ngIf="item.senderId==myId">
                   <div class="chat__bubble chat__bubble--me">
-                    Hi! I just checked, your order went through and is on it's way home. Enjoy your new computer! 😃
-                  </div>
+                    {{item.message}} </div>
                 </li>
-                <li>
+
+                <!-- <li>
                   <div class="chat__bubble chat__bubble--you">
                     Ohh thanks ! I was really worried about it !
                   </div>
@@ -252,13 +252,13 @@
                   <div class="chat__bubble chat__bubble--me">
                     Perfect, thanks !
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
             <div class="chat__send-container px-2 px-md-3 pt-1 pt-md-3">
               <div class="custom-form__send-wrapper">
                 <input type="text" class="form-control custom-form" id="message" placeholder="Ecrivez un message …"
-                  autocomplete="off">
+                  autocomplete="off" [(ngModel)]="sentMsg" (keyup.enter)="onEnterKeyPressed($event)">
                 <div class="custom-form__send-img">
                   <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--send-img" viewBox="0 0 45.7 45.7">
                     <path
@@ -273,7 +273,7 @@
                       fill="#f68b3c" />
                   </svg>
                 </div>
-                <button type="submit" class="custom-form__send-submit">
+                <button type="submit" class="custom-form__send-submit" (click)="sentMessage(sentMsg)">
                   <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--send" viewBox="0 0 45.6 45.6">
                     <g>
                       <path

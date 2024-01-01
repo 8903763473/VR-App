@@ -52,4 +52,8 @@ export class Apiservice {
         return this.http.post(this.baseUrl + '/auth/receive', data);
     }
 
+    sentMessage(data) {
+        return this.http.post(this.baseUrl + '/auth/sent', data);
+    }
+
 }

@@ -11,6 +11,7 @@ import { HomePage } from './home/home.page';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ChatComponent } from './chat/chat.component';
+import { SearchPipe } from './api/search.pipe';
 
 
 const routes: Routes = [
@@ -38,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, AuthenticateComponent, HomePage, ChatComponent],
+  declarations: [AppComponent, AuthenticateComponent, HomePage, ChatComponent,SearchPipe],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule, NgOtpInputModule,
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

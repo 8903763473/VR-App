@@ -3,14 +3,15 @@
 	<!-- ------------------------------------------LOGIN-------------------------------------- -->
 
 	<div id="Login" *ngIf="AuthPage == 1">
-		<header>Become a Member</header>
+		<header for="img">Become a Member</header>
+		<!-- <input type="file" (change)="imageSelected($event)" />
+		<img [src]="pic" alt="Selected Image" *ngIf="pic" /> -->
 		<form method="post">
 			<fieldset>
 				<br />
-				<input type="email" name="email"  placeholder="E-mail" [(ngModel)]="LogMail" required>
+				<input type="email" name="email" placeholder="E-mail" [(ngModel)]="LogMail" required>
 				<br /><br />
-				<input type="password" name="password"  placeholder="Password" [(ngModel)]="LogPassword"
-					required>
+				<input type="password" name="password" placeholder="Password" [(ngModel)]="LogPassword" required>
 				<br /><br />
 				<button (click)="Login()"
 					style="width: 214px;height: 34px;background-color: #FF0000;color: white;">Login</button>
@@ -33,16 +34,14 @@
 		<form method="post">
 			<fieldset>
 				<br />
-				<input type="text" name="username" placeholder="Full Name" [(ngModel)]="name" required
-					autofocus>
+				<input type="text" name="username" placeholder="Full Name" [(ngModel)]="name" required autofocus>
 				<br /><br />
 				<input type="email" name="email" placeholder="E-mail" [(ngModel)]="mail" required>
 				<br /><br />
-				<input type="password" name="password" placeholder="Password" [(ngModel)]="password"
-					required>
+				<input type="password" name="password" placeholder="Password" [(ngModel)]="password" required>
 				<br /><br />
-				<input type="number" name="Mobile"  placeholder="Mobile Number"
-					[(ngModel)]="mobile" required><br /><br /><br />
+				<input type="number" name="Mobile" placeholder="Mobile Number" [(ngModel)]="mobile"
+					required><br /><br /><br />
 				<button (click)="Register()"
 					style="width: 214px;height: 34px;background-color: #FF0000;color: white;">Register</button>
 				<p style="padding: 0;
@@ -62,11 +61,10 @@
 				<br />
 				<input type="email" name="email" placeholder="E mail" [(ngModel)]="ForgetMail" required>
 				<br /><br />
-				<input type="password" name="email" placeholder="New Password" [(ngModel)]="Newpassword"
-					required>
+				<input type="password" name="email" placeholder="New Password" [(ngModel)]="Newpassword" required>
 				<br /><br />
-				<input type="password" name="password"  placeholder="Confirm Password"
-					[(ngModel)]="Confirmpassword" required>
+				<input type="password" name="password" placeholder="Confirm Password" [(ngModel)]="Confirmpassword"
+					required>
 				<br /><br />
 				<button (click)="SetPassword()"
 					style="width: 214px;height: 34px;background-color: #FF0000;color: white;">Get otp</button>
