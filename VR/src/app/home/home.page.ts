@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,8 +9,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
+  constructor(public router: Router) {
 
   }
 
+  chat(data) {
+    this.router.navigate(['/' + data])
+  }
 }
