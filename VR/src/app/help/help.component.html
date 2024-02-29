@@ -1,0 +1,7 @@
+<!-- chat.component.html -->
+<div *ngFor="let message of chatHistory">
+  {{ message }}
+</div>
+
+<input [(ngModel)]="userMessage" placeholder="Type your message..." />
+<button (click)="sendMessage(userMessage)">Send</button>

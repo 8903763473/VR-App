@@ -47,6 +47,7 @@ export class ChatComponent implements AfterViewChecked {
         this.allUsers = this.allUsers.filter(res1 => {
           return this.myId !== res1.userId
         })
+        console.log(this.allUsers);         
         this.getOnlineUsers();
       }),
       error: (err => {
@@ -118,6 +119,8 @@ export class ChatComponent implements AfterViewChecked {
 
     this.api.getChats(post).subscribe({
       next: (async res => {
+        console.log(res);
+        
         this.myConversation = [];
         this.myConversation = res;
         this.ourConversation = await this.ourConversation.concat(this.myConversation.flat());
