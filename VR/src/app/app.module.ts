@@ -14,6 +14,9 @@ import { ChatComponent } from './chat/chat.component';
 import { SearchPipe } from './api/search.pipe';
 import { SocketComponent } from './socket/socket.component';
 import { HelpComponent } from './help/help.component';
+import { PushNotificationService } from './service/pushNotification.service';
+import { FirebaseX } from "@ionic-native/firebase-x/ngx";
+import { Push } from "@ionic-native/push/ngx";
 
 
 const routes: Routes = [
@@ -52,7 +55,7 @@ const routes: Routes = [
   declarations: [AppComponent, AuthenticateComponent, HomePage, ChatComponent, HelpComponent, SearchPipe, SocketComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule, NgOtpInputModule,
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },FirebaseX, Push,PushNotificationService],
   bootstrap: [AppComponent],
   exports: [RouterModule]
 })

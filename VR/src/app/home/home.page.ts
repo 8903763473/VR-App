@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { PushNotificationService } from '../service/pushNotification.service';
 
 
 @Component({
@@ -9,11 +10,15 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(public router: Router) {
+  constructor(public router: Router, public pushNotify: PushNotificationService) {
 
   }
 
   chat(data) {
     this.router.navigate(['/' + data])
+  }
+
+  token() {
+    this.pushNotify.getToken()
   }
 }

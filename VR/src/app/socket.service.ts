@@ -11,7 +11,7 @@ export class SocketService {
   readonly url: any = 'http://localhost:8589';
 
   constructor() {
-    this.socket = io(this.url, { transports: ['websocket'] });
+    // this.socket = io(this.url, { transports: ['websocket'] });
   }
 
   Listen(eventName: any): Observable<any> {
